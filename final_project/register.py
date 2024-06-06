@@ -2,6 +2,7 @@ import streamlit as st
 import sqlite3
 from sqlite3 import Error
 import subprocess
+import webbrowser
 
 # Function to create a database connection
 def create_connection(db_file):
@@ -74,7 +75,7 @@ def main():
                 stored_password = get_user_password(conn, email)
                 if password == stored_password:
                     st.success("Login successful!")
-                    subprocess.run(["streamlit", "run", "candle.py"])
+                    webbrowser.open('https://stock-visualization-forecasting.streamlit.app/')
 
 
                 else:
