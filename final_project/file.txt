@@ -5,3 +5,4 @@ yfinance
 plotly.graph_objects
 pandas
 twilio.rest
+webbrowser
